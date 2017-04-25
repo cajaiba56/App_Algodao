@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Algodao.Pages.AlterarPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Alterar dados do módulo">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <TableView x:Name="tbvwModulo" Intent="Form">
+            <TableRoot Title="DataForm">
+                <TableSection Title="Informações do Módulo">
+
+                    <EntryCell
+                        x:Name="txtNumero"
+                        Keyboard="Numeric"
+                        Label="Número:"
+                        Placeholder="Informe o módulo"
+                        Text="{Binding Numero}" />
+
+
+                    <!--<Picker
+                        x:Name="picFazenda"
+                        Title="Fazenda"
+                        BackgroundColor="Aqua">
+                        <Picker.Items>
+                            <x:String>Fazenda Saudades</x:String>
+                        </Picker.Items>
+                    </Picker>-->
+
+
+                    <EntryCell
+                        x:Name="txtSetor"
+                        Keyboard="text"
+                        Label="Setor:"
+                        Placeholder="Setor"
+                        Text="{Binding Setor}" />
+
+                    <EntryCell
+                        x:Name="txtTalhao"
+                        Keyboard="text"
+                        Label="Talhão:"
+                        Placeholder="Talhão"
+                        Text="{Binding Talhao}" />
+
+                    <EntryCell
+                        x:Name="txtVariedade"
+                        Keyboard="text"
+                        Label="Variedade:"
+                        Placeholder="Variedade"
+                        Text="{Binding Variedade}" />
+
+                    <!--<DatePicker x:Name="dpData" Date="{Binding Data}" />-->
+
+                    <SwitchCell
+                        x:Name="bBordadura"
+                        On="{Binding Bordadura}"
+                        Text="Bordadura?" />
+
+                    <EntryCell
+                        x:Name="txtTurno"
+                        Keyboard="text"
+                        Label="Turno:"
+                        Placeholder="Turno"
+                        Text="{Binding Turno}" />
+
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Button Text="Alterar" />
+            <Button Clicked="Cancelar_Clicked" Text="Cancelar" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

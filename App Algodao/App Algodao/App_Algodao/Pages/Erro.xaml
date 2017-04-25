@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Algodao.Pages.Erro"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Erro">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+        <Label
+            FontSize="30"
+            Text="Login Inválido"
+            TextColor="Red" />
+
+        <Button
+            BackgroundColor="Blue"
+            Clicked="retorna_Clicked"
+            FontSize="30"
+            Text="Retornar"
+            TextColor="White" />
+
+    </StackLayout>
+</ContentPage>

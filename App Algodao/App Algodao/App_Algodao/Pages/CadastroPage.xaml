@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Algodao.Pages.CadastroPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Cadastro de Módulos">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Name="Novo"
+            Activated="Novo_Activated"
+            Icon="add.png"
+            Text="Adicionar" />
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout>
+
+        <SearchBar
+            BackgroundColor="Yellow"
+            Placeholder="Procurar..."
+            TextChanged="SearchBar_TextChanged" />
+
+        <ListView x:Name="lvwModulos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                        Detail="{Binding Talhao}"
+                        DetailColor="Silver"
+                        Text="{Binding Numero}"
+                        TextColor="Black">
+                        <TextCell.ContextActions>
+                            <MenuItem
+                                Clicked="Alterar_Clicked"
+                                CommandParameter="{Binding .}"
+                                Text="Alterar" />
+                            <MenuItem
+                                Clicked="Deletar_Clicked"
+                                CommandParameter="{Binding .}"
+                                IsDestructive="True"
+                                Text="Deletar" />
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

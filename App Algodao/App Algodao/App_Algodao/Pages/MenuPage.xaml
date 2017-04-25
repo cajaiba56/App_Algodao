@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App_Algodao.Pages.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Menu">
+
+    <StackLayout VerticalOptions="Center">
+        <Button
+            Clicked="Button_Clicked"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            Image="more.png"
+            VerticalOptions="Center"
+            WidthRequest="150" />
+
+        <Button
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            Image="find.png"
+            VerticalOptions="Center"
+            WidthRequest="150" />
+    </StackLayout>
+
+</ContentPage>
